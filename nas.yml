@@ -345,7 +345,11 @@
 
     - role: qbittorrent-with-openvpn
       tags:
+<<<<<<< HEAD
          - qbittorrent_with_openvpn
+=======
+        - qbittorrent_with_openvpn
+>>>>>>> cc117d9 (Fix nas.yml)
       when: (qbittorrent_with_openvpn_enabled | default(False))
 
     - role: utorrent
