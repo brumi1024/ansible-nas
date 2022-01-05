@@ -11,7 +11,7 @@
      - "{{ qbittorrent_download_directory }}"
      - "{{ qbittorrent_watch_directory }}"
 
-  - name: qbittorrent with VPN
+ - name: qbittorrent with VPN
    docker_container:
      name: qbittorrent-openvpn
      image: guillaumedsde/alpine-qbittorrent-openvpn:python
