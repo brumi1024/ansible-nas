@@ -1,0 +1,26 @@
+---
+ qbittorrent_enabled: false # Please see docs about how to set VPN credentials
+ qbittorrent_available_externally: "false"
+
+ # directories
+ qbittorrent_data_directory: "{{ docker_home }}/qbittorrent"
+ qbittorrent_config_directory: "{{ qbittorrent_data_directory }}/config"
+ qbittorrent_download_directory: "{{ downloads_root }}"
+ qbittorrent_watch_directory: "{{ torrents_root }}"
+
+ # uid / gid
+ qbittorrent_user_id: "0"
+ qbittorrent_group_id: "0"
+
+ # qbittorrent config
+ qbittorrent_ratio_limit_enabled: "true"
+ qbittorrent_ratio_limit: "2"
+ qbittorrent_ipwhitelist: "192.168.50.0/24" # multi subnet example: "192.168.1.0/24,169.254.0.1/24"
+
+ # network config
+ qbittorrent_webui_port: "8080"
+ qbittorrent_bt_port: "6881"
+ qbittorrent_hostname: "qbittorrent"
+
+ # specs
+ qbittorrent_memory: 3g

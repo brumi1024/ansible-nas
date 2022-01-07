@@ -47,7 +47,3 @@
       traefik.http.routers.deconz.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
       traefik.http.services.deconz.loadbalancer.server.port: "8085"
   when: zigbee_dev.files | length > 0
-<<<<<<< HEAD
-=======
-  
->>>>>>> 3712d08 (Update main.yml)
