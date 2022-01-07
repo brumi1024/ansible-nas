@@ -45,5 +45,5 @@
       traefik.http.routers.deconz.tls.certresolver: "letsencrypt"
       traefik.http.routers.deconz.tls.domains[0].main: "{{ ansible_nas_domain }}"
       traefik.http.routers.deconz.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
-      traefik.http.services.deconz.loadbalancer.server.port: "{{ deconz_port_web }}"
+      traefik.http.services.deconz.loadbalancer.server.port: "8085"
   when: zigbee_dev.files | length > 0
