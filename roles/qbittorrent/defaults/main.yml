@@ -1,5 +1,5 @@
 ---
- qbittorrent_enabled: false # Please see docs about how to set VPN credentials
+ qbittorrent_enabled: false
  qbittorrent_available_externally: "false"
 
  # directories
@@ -15,7 +15,6 @@
  # qbittorrent config
  qbittorrent_ratio_limit_enabled: "true"
  qbittorrent_ratio_limit: "2"
- qbittorrent_ipwhitelist: "192.168.50.0/24" # multi subnet example: "192.168.1.0/24,169.254.0.1/24"
 
  # network config
  qbittorrent_webui_port: "8080"

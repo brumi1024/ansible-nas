@@ -35,6 +35,3 @@
        traefik.http.routers.qbittorrent.tls.domains[0].main: "{{ ansible_nas_domain }}"
        traefik.http.routers.qbittorrent.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
        traefik.http.services.qbittorrent.loadbalancer.server.port: "8080"
-       traefik.http.routers.qbittorrent.middlewares: "qbittorrent-ipwhitelist@docker"
-       traefik.http.middlewares.qbittorrent-ipwhitelist.sourcerange: "{{ qbittorrent_ipwhitelist }}"
-       traefik.http.middlewares.qbittorrent-ipwhitelist.ipwhitelist.ipstrategy.depth: "0"
