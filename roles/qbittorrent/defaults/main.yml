@@ -18,7 +18,7 @@
 
  # network config
  qbittorrent_webui_port: "8080"
- qbittorrent_bt_port: "6881"
+ qbittorrent_bt_port: "57305"
  qbittorrent_hostname: "qbittorrent"
 
  # specs
