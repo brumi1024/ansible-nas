@@ -71,6 +71,9 @@ By default, applications can be found on the ports listed below.
 | Organizr        | 10444   | Bridge  | HTTPS          |
 | Overseerr       | 5055    | Bridge  | HTTP           |
 | Paperless_ng    | 16922   | Bridge  | HTTP           |
+| Pi-hole         | 53      | Bridge  | TCP & UDP      |
+| Pi-hole         | 8182    | Bridge  | TCP & UDP      |
+| Pi-hole         | 8183    | Bridge  | TCP & UDP      |
 | Piwigo          | 16923   | Bridge  | HTTP           |
 | Plex            | 32400   | Bridge  | HTTP           |
 | Portainer       | 9000    | Bridge  | HTTP           |

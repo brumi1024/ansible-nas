@@ -407,6 +407,10 @@
       when: (openhab_enabled | default(False))
       tags: openhab
 
+    - import_tasks: tasks/pihole.yml
+      when: (pihole_enabled | default(False))
+      tags: pihole
+
     - import_tasks: tasks/krusader.yml
       when: (krusader_enabled | default(False))
       tags: krusader

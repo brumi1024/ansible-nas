@@ -62,3 +62,10 @@
     mode: "u=rwX,g=rwX,o=rX"
     recurse: false
   loop: "{{ samba_shares }}"
+
+- name: pull Pi-hole image
+  docker_image:
+    name: pihole/pihole
+    state: present
+  when:
+    - ( pihole_enabled  | default(False))
