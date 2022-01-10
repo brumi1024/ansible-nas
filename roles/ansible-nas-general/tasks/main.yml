@@ -67,5 +67,6 @@
   docker_image:
     name: pihole/pihole
     state: present
+    source: pull
   when:
     - ( pihole_enabled  | default(False))
