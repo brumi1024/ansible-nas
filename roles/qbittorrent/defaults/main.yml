@@ -22,4 +22,4 @@
  qbittorrent_hostname: "qbittorrent"
 
  # specs
- qbittorrent_memory: 3g
+ qbittorrent_memory: 4g
