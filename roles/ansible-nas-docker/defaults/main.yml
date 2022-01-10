@@ -2,7 +2,7 @@
 ansible_nas_user: benjamin
 
 # Where you want Docker to store its container data.
-docker_home: /mnt/internal/docker
+docker_home: /media/docker
 
 # Where you want Docker to store images
 docker_image_directory: "{{ docker_home }}/data"
