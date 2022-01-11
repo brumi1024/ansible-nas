@@ -70,6 +70,9 @@ samba_shares_root: /mnt/Volume3
 # Where stuff downloaded will be stored
 downloads_root: "{{ samba_shares_root }}/downloads"
 
+# Where completed downloads will be stored
+completed_downloads_root: "{{ samba_shares_root }}/downloads_completed"
+
 # Where your movies are stored
 movies_root: "{{ samba_shares_root }}/movies"
 

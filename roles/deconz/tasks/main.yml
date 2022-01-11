@@ -15,11 +15,6 @@
     image: "deconzcommunity/deconz:stable"
     pull: yes
     state: 'started'
-    ports:
-      - "{{ deconz_port_ws }}:4043"
-      - "{{ deconz_port_web }}:8085"
-      - "{{ deconz_port_vnc }}:5900"
-      - "{{ deconz_port_novnc }}:6080"
     volumes:
       - "{{ deconz_data_directory }}:/opt/deCONZ:rw"
     network_mode: "host"
@@ -45,5 +40,5 @@
       traefik.http.routers.deconz.tls.certresolver: "letsencrypt"
       traefik.http.routers.deconz.tls.domains[0].main: "{{ ansible_nas_domain }}"
       traefik.http.routers.deconz.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
-      traefik.http.services.deconz.loadbalancer.server.port: "8085"
+      traefik.http.services.deconz.loadbalancer.server.port: "{{ deconz_port_web }}"
   when: zigbee_dev.files | length > 0
