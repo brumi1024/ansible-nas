@@ -6,8 +6,8 @@ tautulli_available_externally: "false"
 tautulli_config_directory: "{{ docker_home }}/tautulli/config"
 
 # uid / gid
-tautulli_user_id: "0"
-tautulli_group_id: "0"
+tautulli_user_id: "1000"
+tautulli_group_id: "1000"
 
 # network
 tautulli_hostname: "tautulli"

@@ -13,10 +13,6 @@
  qbittorrent_user_id: "0"
  qbittorrent_group_id: "0"
 
- # qbittorrent config
- qbittorrent_ratio_limit_enabled: "true"
- qbittorrent_ratio_limit: "2"
-
  # network config
  qbittorrent_webui_port: "8080"
  qbittorrent_bt_port: "57305"
