@@ -3,9 +3,8 @@ sonarr_enabled: false
 sonarr_available_externally: "false"
 
 # directories
-sonarr_data_directory: "{{ docker_home }}/sonarr/config"
-sonarr_tv_directory: "{{ tv_root }}"
-sonarr_download_directory: "{{ completed_downloads_root }}"
+sonarr_config_directory: "{{ docker_home }}/sonarr/config"
+sonarr_data_directory: "{{ blackbox_root }}"
 
 # uid / gid
 sonarr_user_id: "1000"
