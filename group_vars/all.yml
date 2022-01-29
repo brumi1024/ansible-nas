@@ -44,6 +44,21 @@ ubooquity_enabled: false
 # Joomla
 joomla_enabled: false
 
+<<<<<<< HEAD
+=======
+# PyTivo
+pytivo_enabled: false
+
+# Pi-hole
+pihole_enabled: false
+
+# overseerr
+overseerr_enabled: false
+
+# synology mount
+synology_mount_enabled: false
+
+>>>>>>> 499b202 (Add new logo, make synology mounts configurable.)
 ###
 ### General
 ###

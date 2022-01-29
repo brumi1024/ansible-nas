@@ -36,12 +36,16 @@
 
 - name: Configure autofs master file
   raw: sudo grep -qxF '/mnt /etc/auto.synology --timeout 1200' /etc/auto.master || echo '/mnt /etc/auto.synology --timeout 1200' | sudo tee -a /etc/auto.master
+  when: (synology_mount_enabled | default(False))
+
 
 - name: Configure autofs synology file
   raw: echo 'blackbox -rw,hard,intr,rsize=8192,wsize=8192 192.168.50.2:/volume1/blackbox' | sudo tee /etc/auto.synology
+  when: (synology_mount_enabled | default(False))
 
 - name: Restart autofs and mount dir
   raw: sudo service autofs restart && cd /mnt/blackbox && cd -
+  when: (synology_mount_enabled | default(False))
 
 #  - name: Configure smartmontools
 
