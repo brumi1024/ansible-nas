@@ -44,21 +44,9 @@ ubooquity_enabled: false
 # Joomla
 joomla_enabled: false
 
-<<<<<<< HEAD
-=======
-# PyTivo
-pytivo_enabled: false
-
-# Pi-hole
-pihole_enabled: false
-
-# overseerr
-overseerr_enabled: false
-
 # synology mount
 synology_mount_enabled: false
 
->>>>>>> 499b202 (Add new logo, make synology mounts configurable.)
 ###
 ### General
 ###
@@ -259,41 +247,6 @@ joomla_database_password: top_secret
 joomla_port: "8181"
 
 ###
-<<<<<<< HEAD
-=======
-### PyTivo
-###
-pytivo_available_externally: "false"
-pytivo_config_directory: "{{ docker_home }}/pytivo/config"
-pytivo_movies_directory: "{{ movies_root }}"
-pytivo_tv_directory: "{{ tv_root }}"
-pytivo_photos_directory: "{{ photos_root }}"
-pytivo_music_directory: "{{ music_root }}"
-pytivo_podcasts_directory: "{{ podcasts_root }}"
-pytivo_user_id: "0"
-pytivo_group_id: "0"
-
-###
-### Pi-hole
-###
-pihole_available_externally: "false"
-pihole_data_directory: "{{ docker_home }}/pihole"
-pihole_dns1: "1.1.1.1"
-pihole_dns2: "8.8.8.8"
-pihole_WEBPASSWORD: "byebyeads"
-
-###
-### YouTubeDL-Material
-###
-youtubedlmaterial_available_externally: "false"
-youtubedlmaterial_data_directory: "{{ docker_home }}/youtubedlmaterial"
-youtubedlmaterial_dl_audio_directory: "{{ downloads_root }}/youtube/audio"
-youtubedlmaterial_dl_video_directory: "{{ downloads_root }}/youtube/video"
-youtubedlmaterial_dl_subscriptions_directory: "{{ downloads_root }}/youtube/subscriptions"
-youtubedlmaterial_port_http: "8998"
-
-###
->>>>>>> ccbb245 (Add Pi-hole and edit plex memory)
 ### OpenVPN
 ###
 openvpn_config_directory: "{{ docker_home }}/openvpn"

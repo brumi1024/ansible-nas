@@ -10,8 +10,8 @@
  qbittorrent_watch_directory: "{{ torrents_root }}"
 
  # uid / gid
- qbittorrent_user_id: "0"
- qbittorrent_group_id: "0"
+ qbittorrent_user_id: "1000"
+ qbittorrent_group_id: "1000"
 
  # network config
  qbittorrent_webui_port: "8080"
@@ -19,4 +19,4 @@
  qbittorrent_hostname: "qbittorrent"
 
  # specs
- qbittorrent_memory: 4g
+ qbittorrent_memory: 2g

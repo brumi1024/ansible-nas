@@ -34,19 +34,6 @@
   register: result
   until: result is succeeded
 
-- name: Configure autofs master file
-  raw: sudo grep -qxF '/mnt /etc/auto.synology --timeout 1200' /etc/auto.master || echo '/mnt /etc/auto.synology --timeout 1200' | sudo tee -a /etc/auto.master
-  when: (synology_mount_enabled | default(False))
-
-
-- name: Configure autofs synology file
-  raw: echo 'blackbox -rw,hard,intr,rsize=8192,wsize=8192 192.168.50.2:/volume1/blackbox' | sudo tee /etc/auto.synology
-  when: (synology_mount_enabled | default(False))
-
-- name: Restart autofs and mount dir
-  raw: sudo service autofs restart && cd /mnt/blackbox && cd -
-  when: (synology_mount_enabled | default(False))
-
 #  - name: Configure smartmontools
 
 - name: "Set hostname to {{ ansible_nas_hostname }}"
@@ -61,8 +48,8 @@
   file:
     path: "{{ item.path }}"
     state: directory
-    owner: ansible-nas
-    group: ansible-nas
+    owner: "{{ ansible_nas_user }}"
+    group: "{{ ansible_nas_user }}"
     mode: "u=rwX,g=rwX,o=rX"
     recurse: false
   loop: "{{ samba_shares }}"
