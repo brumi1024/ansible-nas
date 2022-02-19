@@ -5,15 +5,15 @@
     state: directory
   with_items:
     - "{{ nextcloud_data_directory }}/nextcloud"
-    - "{{ nextcloud_data_directory }}/mysql"
+    - "{{ docker_home }}/mysql"
 
 - name: Nextcloud Mysql Docker Container
   docker_container:
     name: nextcloud-mysql
-    image: mysql:5.7
+    image: mysql:8.0
     pull: true
     volumes:
-      - "{{ nextcloud_data_directory }}/mysql:/var/lib/mysql:rw"
+      - "{{ docker_home }}/mysql:/var/lib/mysql:rw"
     env:
       MYSQL_DATABASE: "nextcloud"
       MYSQL_USER: "{{ nextcloud_sql_user }}"
@@ -25,7 +25,7 @@
 - name: Nextcloud Docker Container
   docker_container:
     name: nextcloud
-    image: nextcloud:14
+    image: nextcloud:latest
     pull: true
     links:
       - nextcloud-mysql:mysql
