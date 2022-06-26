@@ -343,11 +343,6 @@
         - transmission_with_openvpn
       when: (transmission_with_openvpn_enabled | default(False))
 
-    - role: qbittorrent_with_openvpn
-      tags:
-        - qbittorrent_with_openvpn
-      when: (qbittorrent_with_openvpn_enabled | default(False))
-
     - role: qbittorrent
       tags:
         - qbittorrent
