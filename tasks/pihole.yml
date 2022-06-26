@@ -7,7 +7,7 @@
     - "{{ pihole_data_directory }}/etc/pihole"
 
 # prepare dns resolver
- # https://github.com/pi-hole/docker-pi-hole#installing-on-ubuntu
+# https://github.com/pi-hole/docker-pi-hole#installing-on-ubuntu
 - name: Check if dns resolver already prepared
   shell: cat /etc/systemd/resolved.conf | grep -E "^DNSStubListener=no$"
   ignore_errors: true
